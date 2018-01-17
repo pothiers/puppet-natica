@@ -1,0 +1,14 @@
+{
+  "name": "puppet-natica",
+  "version": "0.1.0",
+  "author": "Steve",
+  "summary": "Django web services for NATICA",
+  "license": "Apache 2.0",
+  "source": "https://github.com/NOAO/mars.git",
+  "project_page": "https://github.com/NOAO/mars",
+  "issues_url": "https://github.com/NOAO/mars/issues",
+  "dependencies": [
+    {"version_requirement":">= 1.0.0","name":"puppetlabs-stdlib"}
+  ]
+}
+
