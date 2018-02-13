@@ -24,9 +24,9 @@ marsversion: ${marsversion}
     mode    => '0774',
   }
   
-  file { '/etc/mars/natica_local_settings.py':
+  file { '/etc/mars/django_local_settings.py':
     replace => true,
-    source  => hiera('localdjango'),
+    source  => hiera('natica_local_settings'),
   } 
 
   yumrepo { 'ius':
@@ -46,7 +46,7 @@ marsversion: ${marsversion}
   vcsrepo { '/opt/mars' :
     ensure   => latest,
     provider => git,
-    source   => 'https://github.com/NOAO/mars.git',
+    source   => 'https://github.com/NOAO/mars.git',  # forked for NATICA
     #!revision => 'master',
     revision => "${marsversion}",
     owner    => 'devops',
